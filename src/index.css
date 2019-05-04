@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  border-radius: 5px;
+  background-color: #ccc7c2;
+  padding: 0px 5px 0px 5px;
+}
+
+blockquote {
+  border-left: solid 5px #9ba1b1;
+  padding-left: 20px;
+  font-style: italic;
+}
+
+.App a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+button {
+  padding: 10px;
+  color: white;
+  /* background-color: #49747b; */
+  background-color: #3f51b5;
+  cursor: pointer;
+}
+
+.App {
+  background-color: #f1f1f1;
+  min-height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+  color: black;
+}
+
+.cardHeader {
+  background-color: grey;
+
+}
+
+.cardBody {
+  background-color: green;
+}
+
+.cardFooter {
+  background-color: yellow
+}
+
