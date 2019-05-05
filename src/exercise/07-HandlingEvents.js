@@ -17,20 +17,23 @@ class FancyInput extends Component {
         }
 
         /**
-         * ✏️ 
+         * ✏️
          * Need to bind the handleChange function to appropriate `this`
          */
+        this.handleChange = this.handleChange.bind(this);
     }
 
     /**
-     * ✏️ 
+     * ✏️
      * Need to get the value of the input and set it to the state
      * 🧭  Get the value of the input from the synthetic event
      *     You can get the value by using event.target.value.
      * 🧭  Set the value to the state `inputValue` by calling `setState`
      */
     handleChange(e) {
-
+        this.setState({
+            inputValue: e.target.value,
+        })
     }
 
     render() {
@@ -39,13 +42,13 @@ class FancyInput extends Component {
             <React.Fragment>
                 {
                 /**
-                 * ✏️ 
+                 * ✏️
                  * Need to pass the event handler to the input element.
                  * In this case we need to pass handleChange function to the
                  * onChange event
                  */
                 }
-                <input></input>
+                <input onChange={this.handleChange}></input>
                 {
                 /**
                  * 💡
@@ -63,7 +66,7 @@ class FancyInput extends Component {
 
 /**
  * 🚨 🚨 DO NOT DELETE OR CHANGE THIS.🚨 🚨
- * This is how you would use your above component 
+ * This is how you would use your above component
  * The output of this code is displayed on the browser on the left hand side
  */
 const Usage = (props) => {
