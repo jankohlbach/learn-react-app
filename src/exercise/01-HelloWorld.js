@@ -8,18 +8,18 @@ import React from 'react';
 function HelloWorld(props) {
     return (
         /**
-         * ✏️ 
+         * ✏️
          * Instead of returning null you would need to return a React element
          * Use the React.createElement function to display a div
          * and Hello World text inside the div
          */
-        null
+        React.createElement('div', null, 'Hello World')
     );
 }
 
 /**
  * 🚨 🚨 DO NOT DELETE OR CHANGE THIS.🚨 🚨
- * This is how you would use your above component and 
+ * This is how you would use your above component and
  * the output of this code is displayed on the browser
  */
 const Usage = (props) => {
