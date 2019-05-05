@@ -12,8 +12,8 @@ function CompanyProfile(props) {
      * Well we get it as "props". The user of this component will
      * pass the value for these two variables.
      */
-    const stockTicker = ''; //✏️ Instead of empty string we want to get this value from props
-    const companyProfileInfo = {}; //✏️ Instead of empty object we want to get this value from props
+    const stockTicker = props.stockTicker; //✏️ Instead of empty string we want to get this value from props
+    const companyProfileInfo = props.companyProfileInfo; //✏️ Instead of empty object we want to get this value from props
     return (
         <div>
             <div>Profile of: {stockTicker}</div>
@@ -48,13 +48,13 @@ function FBCompanyProfile() {
      * we need to pass `stockTicker` and `companyProfileInfo`
      * */
     return (
-        <CompanyProfile />
+        <CompanyProfile stockTicker={stockTicker} companyProfileInfo={companyProfileInfo} />
     )
 }
 
 /**
  * 🚨 🚨 DO NOT DELETE OR CHANGE THIS.🚨 🚨
- * This is how you would use your above component and 
+ * This is how you would use your above component and
  * the output of this code is displayed on the browser
  */
 const Usage = (props) => {
