@@ -25,7 +25,7 @@ class CompanyProfile extends Component {
     }
 
     /**
-     * ✏️ 
+     * ✏️
      * We need to use componentDidMount lifecycle method to fetch company profile
      * information for given stock ticker using the DataAPI provided
      * 🧭  Add lifecycle method called componentDidMount
@@ -43,7 +43,15 @@ class CompanyProfile extends Component {
      *             .catch(error => console.log(error))
      * */
     componentDidMount() {
-
+        DataAPI.getCompanyProfile(this.props.stockTicker)
+            .then((profile) => {
+                this.setState({
+                    companyProfileInfo: profile,
+                })
+            })
+            .catch((error) => {
+                console.log(error);
+            })
     }
 
     render() {
@@ -68,7 +76,7 @@ class CompanyProfile extends Component {
 
 /**
  * 🚨 🚨 DO NOT DELETE OR CHANGE THIS.🚨 🚨
- * This is how you would use your above component and 
+ * This is how you would use your above component and
  * the output of this code is displayed on the browser
  */
 const Usage = (props) => {
