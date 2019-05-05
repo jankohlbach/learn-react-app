@@ -22,21 +22,21 @@ function CompanyProfile(props) {
 
     return (
         <div>
-            <div>Profile of: {/**✏️ display stock ticker here*/}</div>
+            <div>Profile of: {stockTicker}</div>
             <hr/>
             <div>
                 {
                     /**
-                     * ✏️ 
-                     * This block is surrounded by curly braces {} so 
+                     * ✏️
+                     * This block is surrounded by curly braces {} so
                      * we can really execute any Javascript stuff here.
-                     * 
+                     *
                      * Loop through the keys of companyProfileInfo
                      * object to render one div per key/value pair. The div should
                      * render key followed by a colon followed by value.
-                     * 
+                     *
                      * 🧭 Object.keys(obj) can be used to loop through the object
-                     * eg: 
+                     * eg:
                      *      const obj = { 'key1': 'value1', 'key2': 'value2'};
                      *      Object.keys(obj) will return ['key1', 'key2']
                      * 🧭 You can use Array.map() to map any key to a div element
@@ -45,6 +45,10 @@ function CompanyProfile(props) {
                      * 🧭 Remember to use curly braces inside the div to render
                      * any text content you want
                      */
+                    Object.keys(companyProfileInfo)
+                        .map((key, index) => {
+                            return <div key={index}>{key}: {companyProfileInfo[key]}</div>
+                        })
                 }
             </div>
         </div>
@@ -53,7 +57,7 @@ function CompanyProfile(props) {
 
 /**
  * 🚨 🚨 DO NOT DELETE OR CHANGE THIS.🚨 🚨
- * This is how you would use your above component and 
+ * This is how you would use your above component and
  * the output of this code is displayed on the browser
  */
 const Usage = (props) => {
